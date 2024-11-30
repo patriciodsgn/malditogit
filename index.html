@@ -1,0 +1,132 @@
+<html>
+
+
+
+<h2>Propietario</h2>
+
+<p>bajar y abrir</p>
+<c0>
+  git clone https://github.com/patriciodsgn/demo15.git</c>
+  cd demo15
+  code .
+</c0>
+
+<p>ver y crear rama para trabajar (dev-pato)</p>
+<c1>
+  git branch
+  git branch dev
+  git checkout dev
+  git checkout -b dev-pato
+</c1>
+
+
+<b1>codear</b1>
+
+<p>subir cambios</p>
+<c2>
+  git add .
+  git commit -m 'comentarios'
+  git push origin dev-pato
+  git status
+</c2>
+
+<b2>pull request: union de dev-pato y dev, eliminar rama</b2>  
+
+
+
+<h2>Colaborador</h2>
+
+<p>bajar y abrir</p>
+<c0>
+  git clone https://github.com/patriciodsgn/demo15.git</c>
+  cd demo15
+  code .
+</c0>
+
+<p>crear rama de trabajo</p>
+<c4>  
+  git fetch origin
+  git checkout -b dev origin/dev
+  git checkout -b prueba
+</c4>
+
+<b1>codear</b1>
+
+<p>subir cambios</p>
+<c2>
+  git add .
+  git commit -m 'comentarios'
+  git push origin prueba
+  git status
+</c2>
+
+<h2>propietario</h2>
+
+<b1>pull request: union de prueba y dev, eliminar rama</b1>
+
+
+<p>borrar rama y bajar cambios</p>
+<red>
+  git branch
+  git checkout dev
+  git branch -d dev-pato2
+  git branch -D dev-pato2
+  git branch
+  git pull origin dev
+</red>
+
+
+
+<style>
+
+html{
+  font-family: sans-serif;
+}
+
+c0, c1, c2, c3, c4, c5, red {
+  white-space: pre;
+  font-family: 'Courier New', Courier, monospace;
+  display: block;
+  color: #fff;
+  padding: 0 16px 16px 0;
+  width: fit-content;
+  background: #000;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+c0{border-left: 20px solid #11feaf;}
+c1{border-left: 20px solid #c4470d;}
+c2{border-left: 20px solid #328f71;}
+c3{border-left: 20px solid #a6a80f;}
+c4{border-left: 20px solid #257fc0;}
+c5{border-left: 20px solid #6b28b2;}
+red{border-left: 20px solid #b23628;}
+
+
+b1,
+b2
+{
+  background: #d1cccc;
+  color: #746b6b;
+  padding: 20px;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+  max-width: 500px;
+  display: block;
+  
+}
+
+
+h2{
+  margin-top: 60px;
+  border-top: 1px solid #000;
+}
+p{
+  margin: 0;
+  opacity: 0.6;
+  
+
+}
+</style>
+</html>
